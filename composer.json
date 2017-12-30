@@ -1,0 +1,26 @@
+{
+    "name": "skytells/redis",
+    "description": "The Skytells Redis package.",
+    "license": "MIT",
+    "homepage": "https://www.skytells.net",
+    "require": {
+        "php": "^7.1.3",
+        "skytells/contracts": "1.*",
+        "skytells/support": "1.*",
+        "predis/predis": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skytells\\Redis\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.6-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
