@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Redis;
+namespace Skytells\Redis;
 
-use Illuminate\Support\Arr;
-use Illuminate\Support\ServiceProvider;
+use Skytells\Support\Arr;
+use Skytells\Support\ServiceProvider;
 
 class RedisServiceProvider extends ServiceProvider
 {

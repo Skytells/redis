@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Redis\Connectors;
+namespace Skytells\Redis\Connectors;
 
 use Redis;
 use RedisCluster;
-use Illuminate\Support\Arr;
-use Illuminate\Redis\Connections\PhpRedisConnection;
-use Illuminate\Redis\Connections\PhpRedisClusterConnection;
+use Skytells\Support\Arr;
+use Skytells\Redis\Connections\PhpRedisConnection;
+use Skytells\Redis\Connections\PhpRedisClusterConnection;
 
 class PhpRedisConnector
 {
@@ -15,7 +15,7 @@ class PhpRedisConnector
      *
      * @param  array  $config
      * @param  array  $options
-     * @return \Illuminate\Redis\Connections\PhpRedisConnection
+     * @return \Skytells\Redis\Connections\PhpRedisConnection
      */
     public function connect(array $config, array $options)
     {
@@ -30,7 +30,7 @@ class PhpRedisConnector
      * @param  array  $config
      * @param  array  $clusterOptions
      * @param  array  $options
-     * @return \Illuminate\Redis\Connections\PhpRedisClusterConnection
+     * @return \Skytells\Redis\Connections\PhpRedisClusterConnection
      */
     public function connectToCluster(array $config, array $clusterOptions, array $options)
     {

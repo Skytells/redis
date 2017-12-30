@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Redis\Limiters;
+namespace Skytells\Redis\Limiters;
 
-use Illuminate\Contracts\Redis\LimiterTimeoutException;
+use Skytells\Contracts\Redis\LimiterTimeoutException;
 
 class ConcurrencyLimiter
 {
     /**
      * The Redis factory implementation.
      *
-     * @var \Illuminate\Redis\Connections\Connection
+     * @var \Skytells\Redis\Connections\Connection
      */
     protected $redis;
 
@@ -37,7 +37,7 @@ class ConcurrencyLimiter
     /**
      * Create a new concurrency limiter instance.
      *
-     * @param  \Illuminate\Redis\Connections\Connection  $redis
+     * @param  \Skytells\Redis\Connections\Connection  $redis
      * @param  string  $name
      * @param  int  $maxLocks
      * @param  int  $releaseAfter
@@ -57,7 +57,7 @@ class ConcurrencyLimiter
      * @param  int  $timeout
      * @param  callable|null  $callback
      * @return bool
-     * @throws \Illuminate\Contracts\Redis\LimiterTimeoutException
+     * @throws \Skytells\Contracts\Redis\LimiterTimeoutException
      */
     public function block($timeout, $callback = null)
     {

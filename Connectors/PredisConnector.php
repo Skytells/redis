@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Redis\Connectors;
+namespace Skytells\Redis\Connectors;
 
 use Predis\Client;
-use Illuminate\Support\Arr;
-use Illuminate\Redis\Connections\PredisConnection;
-use Illuminate\Redis\Connections\PredisClusterConnection;
+use Skytells\Support\Arr;
+use Skytells\Redis\Connections\PredisConnection;
+use Skytells\Redis\Connections\PredisClusterConnection;
 
 class PredisConnector
 {
@@ -14,7 +14,7 @@ class PredisConnector
      *
      * @param  array  $config
      * @param  array  $options
-     * @return \Illuminate\Redis\Connections\PredisConnection
+     * @return \Skytells\Redis\Connections\PredisConnection
      */
     public function connect(array $config, array $options)
     {
@@ -31,7 +31,7 @@ class PredisConnector
      * @param  array  $config
      * @param  array  $clusterOptions
      * @param  array  $options
-     * @return \Illuminate\Redis\Connections\PredisClusterConnection
+     * @return \Skytells\Redis\Connections\PredisClusterConnection
      */
     public function connectToCluster(array $config, array $clusterOptions, array $options)
     {

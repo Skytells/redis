@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Redis\Connections;
+namespace Skytells\Redis\Connections;
 
 use Closure;
 

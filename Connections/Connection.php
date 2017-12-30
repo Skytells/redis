@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Redis\Connections;
+namespace Skytells\Redis\Connections;
 
 use Closure;
-use Illuminate\Redis\Limiters\DurationLimiterBuilder;
-use Illuminate\Redis\Limiters\ConcurrencyLimiterBuilder;
+use Skytells\Redis\Limiters\DurationLimiterBuilder;
+use Skytells\Redis\Limiters\ConcurrencyLimiterBuilder;
 
 /**
  * @mixin \Predis\Client
@@ -32,7 +32,7 @@ abstract class Connection
      * Funnel a callback for a maximum number of simultaneous executions.
      *
      * @param  string  $name
-     * @return \Illuminate\Redis\Limiters\ConcurrencyLimiterBuilder
+     * @return \Skytells\Redis\Limiters\ConcurrencyLimiterBuilder
      */
     public function funnel($name)
     {
@@ -43,7 +43,7 @@ abstract class Connection
      * Throttle a callback for a maximum number of executions over a given duration.
      *
      * @param  string  $name
-     * @return \Illuminate\Redis\Limiters\DurationLimiterBuilder
+     * @return \Skytells\Redis\Limiters\DurationLimiterBuilder
      */
     public function throttle($name)
     {

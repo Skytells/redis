@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Redis\Limiters;
+namespace Skytells\Redis\Limiters;
 
-use Illuminate\Support\InteractsWithTime;
-use Illuminate\Contracts\Redis\LimiterTimeoutException;
+use Skytells\Support\InteractsWithTime;
+use Skytells\Contracts\Redis\LimiterTimeoutException;
 
 class ConcurrencyLimiterBuilder
 {
@@ -12,7 +12,7 @@ class ConcurrencyLimiterBuilder
     /**
      * The Redis connection.
      *
-     * @var \Illuminate\Redis\Connections\Connection
+     * @var \Skytells\Redis\Connections\Connection
      */
     public $connection;
 
@@ -47,7 +47,7 @@ class ConcurrencyLimiterBuilder
     /**
      * Create a new builder instance.
      *
-     * @param  \Illuminate\Redis\Connections\Connection  $connection
+     * @param  \Skytells\Redis\Connections\Connection  $connection
      * @param  string  $name
      * @return void
      */
@@ -103,7 +103,7 @@ class ConcurrencyLimiterBuilder
      * @param  callable|null  $failure
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Redis\LimiterTimeoutException
+     * @throws \Skytells\Contracts\Redis\LimiterTimeoutException
      */
     public function then(callable $callback, callable $failure = null)
     {

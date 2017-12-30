@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Redis\Limiters;
+namespace Skytells\Redis\Limiters;
 
-use Illuminate\Contracts\Redis\LimiterTimeoutException;
+use Skytells\Contracts\Redis\LimiterTimeoutException;
 
 class DurationLimiter
 {
     /**
      * The Redis factory implementation.
      *
-     * @var \Illuminate\Redis\Connections\Connection
+     * @var \Skytells\Redis\Connections\Connection
      */
     private $redis;
 
@@ -51,7 +51,7 @@ class DurationLimiter
     /**
      * Create a new duration limiter instance.
      *
-     * @param  \Illuminate\Redis\Connections\Connection $redis
+     * @param  \Skytells\Redis\Connections\Connection $redis
      * @param  string $name
      * @param  int $maxLocks
      * @param  int $decay
@@ -71,7 +71,7 @@ class DurationLimiter
      * @param  int $timeout
      * @param  callable|null $callback
      * @return bool
-     * @throws \Illuminate\Contracts\Redis\LimiterTimeoutException
+     * @throws \Skytells\Contracts\Redis\LimiterTimeoutException
      */
     public function block($timeout, $callback = null)
     {
